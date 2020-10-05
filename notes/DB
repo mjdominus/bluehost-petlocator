@@ -16,5 +16,13 @@ cell tower -> location
 # Do we store pet IDs or pet collar IDs in the DB?
 pet id + location + date    triple
 
+# Is this in SQL?  It will be large and frequently churning.  Dynamo
+  might be a better choice.   What is the key?    The pet ID is surely
+  the primary key.  Can we use the location as a range key somehow?
+  Maybe geohashes?  If geohashes, could we treat time as a fourth
+  geographic coordinate to do proximity-in-time searches?
+
+
+
 
 

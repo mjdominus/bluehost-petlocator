@@ -8,4 +8,23 @@ Looking into:
 
 Tentative conclusion: Just hide it behind an abstract API that does
 proximity searches.  For the demo backend, do the simplest thing that could
-possibly work.  (Say, assume the earth is flat!)  
+possibly work.  (Say, assume the earth is flat!)
+
+Consider this:
+
+         * Searching for and returning contact information for opted-in owners of other pets within a
+           5-mile radius.
+
+This could mean:
+
+* Other pets which are _now_ within 5 miles
+
+* Other pets which were within 5 miles of your pet at some point in
+  the recent past
+
+* Other pets which were recently within 5 miles of somewhere your pet
+  has been recently
+
+  (Use case: My pet was at park X on Tuesday, your pet was at park X
+  on Friday, let's arrange to meet on the same day, next time.)
+

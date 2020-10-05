@@ -1,0 +1,22 @@
+
+
+
+* boring administrative stuff (billing etc.)
+  ** create user
+  ** set service level
+  ** update contact info
+
+* pets
+  * create pet (owner, name, additional info)
+  * (dis)associate collar with pet (constraint: at most one pet per collar)
+
+* location
+  * record pet location triple
+  * collar id, time → location
+  * location, time, radius, t-interval → other collars in
+    temporospatial region
+  * collar id → recent locations, sorted (paged)
+
+  A lot of these functions that return a pet or a collar ID could return
+  a { "collar": id, "pet": id } pair.
+
