@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+
+import sys
+import os
+
+HOME = os.environ.get("PET_TRACK_HOME", "/home/mjd/src/bluehost")
+sys.path.append(HOME)
+from api.base import app
+
+if __name__ == "__main__":
+    app.run(debug=True)

@@ -1,10 +1,10 @@
 
 import pytest
-from api import trivial
 
+import api.base
 @pytest.fixture
 def app():
-    yield trivial.app
+    yield api.base.app
 
 @pytest.fixture
 def client(app):

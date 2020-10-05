@@ -9,3 +9,5 @@ def test_null(app):
 def test_hello(client):
     res = client.get("/hello/").get_json()
     assert res.get("hello") == "world"
+    res = client.get("/goodbye/").get_json()
+    assert "world" in res.get("goodbye")
