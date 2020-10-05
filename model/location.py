@@ -8,3 +8,9 @@ class Location:
     lat: float                  # latitude
     lon: float                  # longitude
     alt: float = None           # altitude
+
+    def repr(self):
+        r = { "lat": self.lat, "lon": self.lon }
+        if self.alt is not None:
+            r["alt"] = self.alt
+        return r
