@@ -1,9 +1,37 @@
 
-
 The main app is in the `api` package.  `api.base` loads the various
 routes.  `bin/runapp` shows how to instantiate and run the app.
 
-To run the tests, use `pytest` or `pytest path/to/test_file.py`.
+* Currently-implemented endpoints are:
+
+Record an observation of a pet at the specified latitude, longitude,
+and time:
+
+                      POST /record
+                        { "pet_id": 1234,
+                          "where": "39.5710,-75.0949",
+                          "when": "2020-10-05T14:10:14-04:00" }
+
+If the time is omitted, it is taken to be the present instant:
+
+                      POST /record
+                        { "pet_id": 1234, "where": "39.5710,-75.0949" }
+
+Find the location of the pet at the specified time:
+
+                      GET /find-pet/:pet_id/:when
+
+for example
+
+                      GET /find-pet/1234/2020-10-05T14:10:14-04:00
+
+This returns a location structure:
+
+             { "lat": 39.5710, "lon": -75.0949 }
+
+* To run the tests, use `pytest` or `pytest path/to/test_file.py`.
+
+* Code layout
 
 The app uses a subsidiary package, called `location`, for storing and
 searching location data.  The main entry is
