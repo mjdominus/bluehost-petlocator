@@ -18,6 +18,16 @@ class LocationStorage():
 
         raise exception.AbstractMethod("record_triple")
 
+    def record_triple(pet, where, when, **kwargs):
+        """Save a pet-where-when triple in the data store
+
+        Args:
+        pet    : The `Pet` object
+        where  : `Location` object describing where the pet was
+        when   : `datetime` object describing when the observation was made
+        """
+
+        raise locator.exception.AbstractMethod("record_triple")
 
 class LocationStorage_File(LocationStorage):
     def __init__(self, *args, **kwargs):
@@ -29,7 +39,7 @@ class LocationStorage_File(LocationStorage):
         return Path("/home/mjd/bluehost/data")
 
     def record_triple(self, pet, where, when):
-        data = { "pet_id": pet.pet_id,
+        data = { "pet_id": pet.collar_id,
                  "location_hash": where.loc_hash,
                  "timestamp": when.timestamp(),
         }
