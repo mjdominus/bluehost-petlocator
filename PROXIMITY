@@ -1,0 +1,11 @@
+
+BIG QUESTION: how to do proximity searching?
+
+Looking into:
+  PostGIS (spatial and geographic objects for postgres) https://postgis.net/
+  MySQL spatial objects  https://dev.mysql.com/doc/refman/5.7/en/spatial-function-reference.html
+  LocalSOLR http://www.gissearch.com/localsolr
+
+Tentative conclusion: Just hide it behind an abstract API that does
+proximity searches.  For the demo backend, do the simplest thing that could
+possibly work.  (Say, assume the earth is flat!)  

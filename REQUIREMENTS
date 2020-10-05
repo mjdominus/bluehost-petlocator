@@ -1,6 +1,10 @@
-Storing location data from cellular transmitters attached to pet collars and collected by
-units installed on cell towers.
-Returning historical location data for a given pet (basic users can see the last 24 hours
-while premium users can see the last 30 days of data).
-Searching for and returning contact information for opted-in owners of other pets within a
-5-mile radius. [Note: This is premium functionality.]
+* Storing location data from cellular transmitters attached to pet collars and collected by
+  units installed on cell towers.
+
+* Returning historical location data for a given pet (basic users can see the last 24 hours
+  while premium users can see the last 30 days of data).
+
+* Searching for and returning contact information for opted-in owners of other pets within a
+  5-mile radius. [Note: This is premium functionality.]
+
+

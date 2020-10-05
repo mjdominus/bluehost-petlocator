@@ -1,0 +1,20 @@
+pet -> pet info (name, etc.)
+
+pet -> pet collar ID
+
+pets <-> owners
+
+owner -> non-PII (service level, opt-in, etc.)  (use dynamo?)
+owner -> PII / billing
+
+# Don't need this, the mobile API will be able to resolve it
+# and send us the lat/long; see
+# https://developers.google.com/maps/documentation/geolocation/overview
+# for example
+cell tower -> location
+
+# Do we store pet IDs or pet collar IDs in the DB?
+pet id + location + date    triple
+
+
+
