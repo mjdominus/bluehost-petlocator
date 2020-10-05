@@ -8,7 +8,14 @@ Looking into:
 
 Tentative conclusion: Just hide it behind an abstract API that does
 proximity searches.  For the demo backend, do the simplest thing that could
-possibly work.  (Say, assume the earth is flat!)
+possibly work.  (Say, assume the earth is flat!)  
+
+(Bluehost doc says “The service prototype will use canned location
+data”)
+
+So we are going to ASSUME that there is _some_ way to store
+location-time data in a way that permits the required proximity
+queries to be implemented in a reasonably efficient way.
 
 Consider this:
 

@@ -1,10 +1,10 @@
 
 
-
 * boring administrative stuff (billing etc.)
   ** create user
   ** set service level
   ** update contact info
+  ** associate / disssociate phone
 
 * pets
   * create pet (owner, name, additional info)
