@@ -11,12 +11,12 @@ class LocationStorage():
         """Save a pet-where-when triple in the data store
 
         Args:
-        pet    : The `Pet` object
+        pet    : The `PetPair` object
         where  : `Location` object describing where the pet was
         when   : `datetime` object describing when the observation was made
         """
 
-        raise exception.AbstractMethod("record_triple")
+        raise locator.exception.AbstractMethod("record_triple")
 
     def record_triple(pet, where, when, **kwargs):
         """Save a pet-where-when triple in the data store

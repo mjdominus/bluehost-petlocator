@@ -1,0 +1,23 @@
+
+
+The main app is in the `api` package.  `api.base` loads the various
+routes.  `bin/runapp` shows how to instantiate and run the app.
+
+To run the tests, use `pytest` or `pytest path/to/test_file.py`.
+
+The app uses a subsidiary package, called `location`, for storing and
+searching location data.  The main entry is
+`location.service.LocationAPI`, which provides methods for recording
+pet observations and for searching the past records.  `LocationAPI` is
+an abstraction layer over `LocationStorage` which handles the actual
+storage and querying.  A stub version is provided,
+`LocationStorage_File`, which stores location observations in an
+ever-growing JSON file.  This will have to be replaced in the real
+app; see `notes/PROXIMITY` for some notes about software that might
+help us with this.  `LocationStorage` could also pass the query on to
+a network location storage service.
+
+The `model` package contains classes that represent basic data objects
+such as customers, pets, locations, and pet-collar associations.
+These will be backed by a relational database; this is unimplemented
+at present.

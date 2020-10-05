@@ -1,0 +1,3 @@
+
+class NoMatch(Exception):
+    pass
